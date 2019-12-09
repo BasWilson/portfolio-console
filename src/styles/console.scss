@@ -1,0 +1,106 @@
+$transition: all 0.1s;
+
+.window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+
+  &__bar {
+    height: 40px;
+    width: 100%;
+    background: slateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__bar-buttons {
+    display: flex;
+    position: absolute;
+    left: 0;
+  }
+
+  &__bar-button {
+    width: 12.5px;
+    height: 12.5px;
+    border-radius: 50%;
+    margin-left: 15px;
+    transition: $transition;
+
+    &--red {
+      background: red;
+    }
+    &--green {
+      background: rgb(53, 167, 0);
+    }
+    &--orange {
+      background: rgb(255, 123, 0);
+    }
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+
+    &:active {
+      filter: brightness(0.8);
+    }
+  }
+
+  &__bar-title {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    user-select: none;
+  }
+
+  &__console {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 0px;
+  }
+
+  &__console-indicator {
+    position: absolute;
+    color: slateblue;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    left: 15px;
+    top: 20px;
+    user-select: none;
+  }
+
+  &__console-line {
+    width: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    margin: 0 35px;
+  }
+}
+
+.rainbow {
+  -webkit-animation: rainbow 4s infinite;
+}
+
+@-webkit-keyframes rainbow {
+  20% {
+    color: red;
+  }
+  40% {
+    color: yellow;
+  }
+  60% {
+    color: green;
+  }
+  80% {
+    color: blue;
+  }
+  100% {
+    color: orange;
+  }
+}
