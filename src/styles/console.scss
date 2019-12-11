@@ -54,6 +54,12 @@ $transition: all 0.1s;
     color: white;
     font-size: 14px;
     user-select: none;
+
+    @media only screen and (max-width: 500px) {
+      span {
+        display: none;
+      }
+    }
   }
 
   &__console {
@@ -70,16 +76,16 @@ $transition: all 0.1s;
     line-height: 20px;
     font-weight: 700;
     left: 15px;
-    top: 20px;
     user-select: none;
+    transition: 0.1s all ease-in-out;
   }
 
   &__console-line {
-    width: 100%;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 28px;
     color: white;
     margin: 0 35px;
+    transition: 0.1s all ease-in-out;
   }
 }
 
